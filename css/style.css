@@ -1,0 +1,90 @@
+/*
+Project Name: Annual Report
+Client: Save the Children Australia
+Author: Sophie Everett
+*/
+
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+.alignright {
+  float: right;
+  padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+  float: left;
+  padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  font-family: 'Oswald', sans-serif; font-family: 'Lato', sans-serif;
+  background-color: black;
+  min-height: 2000px;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+nav {
+  position: fixed;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+nav ul li {
+  width: 45px;
+  border-top: 1px solid #fff;
+  display: block;
+  line-height: 10px;
+}
+
+.nav_circles {
+  position: fixed;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav_circles ul li {
+  	width: 13px;
+    height: 13px;
+    margin-bottom: 13px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    border: 1.5px solid #fff;
+}
