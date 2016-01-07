@@ -46,8 +46,6 @@ Author: Sophie Everett
 
 body {
   font-family: 'Oswald', sans-serif; font-family: 'Lato', sans-serif;
-  background-color: black;
-  min-height: 2000px;
 }
 
 a {
@@ -67,9 +65,10 @@ nav {
 
 nav ul li {
   width: 45px;
-  border-top: 1px solid #fff;
+  height: 1px;
+  background: white;
   display: block;
-  line-height: 10px;
+  margin-bottom: 10px;
 }
 
 .nav_circles {
@@ -87,4 +86,32 @@ nav ul li {
     -webkit-border-radius: 50px;
     border-radius: 50px;
     border: 1.5px solid #fff;
+}
+
+section img {
+  max-height: 640px;
+  width: 100%;
+  display: block;
+  background-blend-mode: multiply;
+}
+
+#intro_card img {
+  background-color: grey;
+  background-blend-mode: multiply;
+}
+
+#video_card {
+  background-color: black;
+}
+
+#thanks_card {
+  background-color: grey;
+}
+
+#stat_card {
+  background-color: black;
+}
+
+#thanks_card {
+  background-color: grey;
 }
