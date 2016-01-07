@@ -92,26 +92,81 @@ section img {
   max-height: 640px;
   width: 100%;
   display: block;
-  background-blend-mode: multiply;
 }
 
-#intro_card img {
-  background-color: grey;
-  background-blend-mode: multiply;
+section {
+  height: 640px;
+  width: 100%;
+  display: block;
 }
+
+#intro_card {
+  background-image: url(images/intro_pic.jpg);
+  background-color: #4b4f54;
+  background-blend-mode: multiply;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+
 
 #video_card {
-  background-color: black;
+  background-image: url(images/video_pic.jpg);
+  background-color: #4b4f54;
+  background-blend-mode: multiply;
+  background-repeat:no-repeat;
+  background-position:center;
 }
 
 #thanks_card {
-  background-color: grey;
+  background-image: url(images/thanks_pic.jpg);
+  background-color: #009ca6;
+  background-blend-mode: multiply;
+  background-repeat:no-repeat;
+  background-position:center;
 }
 
-#stat_card {
-  background-color: black;
+#stat1_card {
+  background-image: url(images/stat1_pic.jpg);
+  background-color: #4b4f54;
+  background-blend-mode: multiply;
+  background-repeat:no-repeat;
+  background-position:center;
 }
 
-#thanks_card {
-  background-color: grey;
+#stat2_card {
+  background-image: url(images/stat2_pic.jpg);
+  background-color: #da291c;
+  background-blend-mode: multiply;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+
+#story_card {
+  background-image: url(images/story_pic.jpg);
+  background-repeat:no-repeat;
+  background-position:center;
+}
+
+#graph_card {
+  background-image: url(images/graph_pic.jpg);
+  background-color: #009ca6;
+  background-blend-mode: multiply;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+
+#volunteer_card {
+  background-image: url(images/volunteer_pic.jpg);
+  background-color: #4b4f54;
+  background-blend-mode: multiply;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+
+#end_card {
+  background-image: url(images/end_pic.jpg);
+  background-color: #4b4f54;
+  background-blend-mode: multiply;
+  background-repeat:no-repeat;
+  background-position:center;
 }
