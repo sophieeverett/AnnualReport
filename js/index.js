@@ -63,7 +63,49 @@ $(document).ready(function(){
 							easing: 'linear',
 
 							clickBar: 1
+
 					};
+
+
+
+					});
+
+					// To Start button
+					$wrap.find('.toStart').on('click', function () {
+						var item = $(this).data('item');
+						// Animate a particular item to the start of the frame.
+						// If no item is provided, the whole content will be animated.
+						$frame.sly('toStart', item);
+					});
+
+					// To Center button
+					$wrap.find('.toCenter').on('click', function () {
+						var item = $(this).data('item');
+						// Animate a particular item to the center of the frame.
+						// If no item is provided, the whole content will be animated.
+						$frame.sly('toCenter', item);
+					});
+
+					// To End button
+					$wrap.find('.toEnd').on('click', function () {
+						var item = $(this).data('item');
+						// Animate a particular item to the end of the frame.
+						// If no item is provided, the whole content will be animated.
+						$frame.sly('toEnd', item);
+					});
+
+					// Add item
+					$wrap.find('.add').on('click', function () {
+						$frame.sly('add', '<li>' + $slidee.children().length + '</li>');
+					});
+
+					// Remove item
+					$wrap.find('.remove').on('click', function () {
+						$frame.sly('remove', -1);
+					});
+
+
+
 
 			slides.each(function(){
 					$(this).css({
@@ -79,7 +121,7 @@ $(document).ready(function(){
 			if(goToSlide>0){
 					sly.activatePage(goToSlide, false);
 			}else{
-			// ELSE, goToSlide is 0, we're initialising on page load or window resize calls
+					// ELSE, goToSlide is 0, we're initialising on page load or window resize calls
 					sly = new Sly($sly, options).init();
 			}
 	}
@@ -92,6 +134,7 @@ $(document).ready(function(){
 
 	// Get number from input field and go to slide
 
+/*
 	$('body').on('submit','#slideNav',function(e){
 			var index = $(this).find('input').val()-1;
 			setUpFullPageScrolling(index);
@@ -99,15 +142,16 @@ $(document).ready(function(){
 			// Stop page reloading
 			e.preventDefault();
 	});
+	*/
 
 	// Let any link with class 'slideLink' go to a slide, remember to include data-slide="X"
 
-
+/*
 $('a.arrow-wrap').click(function(e){
 		var anything = $(this).attr('data-slide');
-		console.log(anything);
-		setUpFullPageScrolling(-1);
+		setUpFullPageScrolling(2);
 });
+*/
 
 
 
@@ -133,13 +177,10 @@ $(".sca-icon-play").click(function(){
 });
 
 
-$(window).scroll( function(){
-  var topWindow = $(window).scrollTop();
-	var topWindow = topWindow * 1.5;
-  var windowHeight = $(window).height();
-  var position = topWindow / windowHeight;
-  position = 1 - position;
-  $('.arrow-wrap').css('opacity', position);
+
+$(".arrow-wrap").click( function() {
+    //setUpFullPageScrolling(2);
+		sly.toStart($('#foofoo'));
 });
 
 
