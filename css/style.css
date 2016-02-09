@@ -52,6 +52,63 @@ a {
   text-decoration: none;
 }
 
+/******************************************
+/* VERTICAL SCROLL
+/*******************************************/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+ul.no-list, ul.no-list > li {
+  margin: 0;
+  padding: 0;
+  list-style:
+  none;
+}
+
+.sly-list > li {
+  background-color: #666;
+}
+
+.sly-list > li:nth-child(even) {
+  background-color: #ddd;
+}
+
+
+
+.sly-container {
+  overflow: hidden;
+}
+
+.pages-nav {
+  position: fixed;
+  right: 30px;
+  top: 50%;
+  padding: 1em;
+  z-index: 1;
+}
+
+.pages-nav ul > li {
+  display: block; border: 1px solid #fff;
+  border-radius: 50em;
+  width: 1em;
+  height: 1em;
+  margin: .25em;
+  cursor: pointer;
+}
+
+.pages-nav ul > li:hover {
+  background-color: rgba(255,255,255,.35);
+}
+
+.pages-nav li.active {
+  background-color: #fff;
+}
+
 
 /******************************************
 /* LAYOUT
@@ -202,23 +259,6 @@ nav ul li {
   left: 5.6px;
 }
 
-.nav_circles {
-  position: fixed;
-  right: 30px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-}
-
-.nav_circles ul li {
-  	width: 13px;
-    height: 13px;
-    margin-bottom: 13px;
-    -moz-border-radius: 50px;
-    -webkit-border-radius: 50px;
-    border-radius: 50px;
-    border: 1.5px solid #fff;
-}
 
 section {
   height: 810px;
@@ -438,7 +478,21 @@ img#logo {
   display: block;
   background-repeat: no-repeat;
   background-position: center;
+}
 
+.video-container iframe {
+	height:0;
+	overflow:hidden;
+  display: inline-block;
+  display: none;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+	position: absolute;
+	top:10%;
+	left:10%;
+	width:80%;
+	height:80%;
 }
 
 .icon {
@@ -458,6 +512,29 @@ img#logo {
   position: relative;
   top: 170px;
   left: -50%;
+}
+
+#icon {
+  font-family: 'sca-icons', sans-serif;
+  font-size: 80px;
+  color: #2A2B2D;
+  z-index: 4;
+  width: 100px;
+  height: 100px;
+  background: orange;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  border-style: solid;
+  border-width: 10px;
+  border-color: orange;
+  position: relative;
+  top: 170px;
+  left: -50%;
+}
+
+i.sca-icon-play {
+  cursor: pointer;
 }
 
 .center {
@@ -532,6 +609,8 @@ img#logo {
   background-image: url(images/story_pic.jpg);
   background-repeat:no-repeat;
   background-position:center;
+  height: 810px;
+
 }
 
 #story_card .blackStrip {
@@ -550,7 +629,7 @@ img#logo {
 
 #graph_card .content {
   background-image: url(images/graph_pic.jpg);
-  -webkit-filter: grayscale(100%) sepia(1) contrast(.8) saturate(7) hue-rotate(130deg);
+  -webkit-filter: grayscale(100%) sepia(1) contrast(.9) saturate(0) hue-rotate(130deg);
   background-blend-mode: multiply;
   background-color: #2A2B2D;
   position: absolute;
@@ -564,6 +643,8 @@ img#logo {
   background-repeat: no-repeat;
   background-position: center;
 }
+
+
 
 #volunteer_card {
   position: relative;
@@ -606,4 +687,65 @@ img#logo {
   display: block;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+
+
+
+.chart {
+  position: relative;
+  display: none;
+  text-align: center;
+  margin-top: 150px;
+  z-index: 5;
+}
+
+
+.outer {
+  fill: transparent;
+  stroke: white;
+  stroke-width: 10;
+  stroke-dasharray: 534;
+  transition: stroke-dashoffset 1s;
+  -webkit-animation-play-state: running;
+
+  /* firefox bug fix - won't rotate at 90deg angles */
+  -moz-transform: rotate(-89deg) translateX(-190px);
+}
+
+
+/* END Circle colors and graphic positions */
+
+
+/* Set the initial values for the animation */
+
+.chart[data-percent='75'] .outer {
+  stroke-dashoffset: 133;
+  -webkit-animation: show75 2s;
+  animation: show75 2s;
+}
+
+/* END set initial animation values */
+
+/* Keyframes for the initial animation */
+
+
+@-webkit-keyframes show75 {
+  from {
+    stroke-dashoffset: 537;
+  }
+
+  to {
+    stroke-dashoffset: 134;
+  }
+}
+
+@keyframes show75 {
+  from {
+    stroke-dashoffset: 537;
+  }
+
+  to {
+    stroke-dashoffset: 124;
+  }
 }
