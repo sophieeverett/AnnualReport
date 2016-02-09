@@ -480,6 +480,10 @@ img#logo {
   background-position: center;
 }
 
+#icon.sca-icon-play-invisible {
+  display: none
+}
+
 .video-container iframe {
 	height:0;
 	overflow:hidden;
@@ -644,6 +648,20 @@ i.sca-icon-play {
   background-position: center;
 }
 
+p.graph-text {
+  z-index: 5;
+  position: inherit;
+  margin-top: 450px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 43px;
+  color: white;
+  width: 75%;
+  display: inline-block;
+  text-align: center;
+  line-height: 150%;
+}
+
 
 
 #volunteer_card {
@@ -693,17 +711,18 @@ i.sca-icon-play {
 
 
 .chart {
-  position: relative;
+  position: absolute;
   display: none;
   text-align: center;
-  margin-top: 150px;
+  margin-top: 220px;
   z-index: 5;
+  margin-left: 40%;
 }
 
 
 .outer {
   fill: transparent;
-  stroke: white;
+  stroke: orange;
   stroke-width: 10;
   stroke-dasharray: 534;
   transition: stroke-dashoffset 1s;

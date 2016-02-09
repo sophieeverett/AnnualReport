@@ -126,8 +126,12 @@ $("#menuClick").click(function(){
 	$("#nav-icon4").toggleClass("open");
 	$("#nav-icon4 li").toggleClass("menuAnimate2");
 	$("#menuClick").toggleClass("menuAnimate3");
-
 });
+
+$(".sca-icon-play").click(function(){
+	$(".invisible").toggleClass("sca-icon-play-invisible");
+});
+
 
 $(window).scroll( function(){
   var topWindow = $(window).scrollTop();
@@ -148,7 +152,7 @@ $('.sca-icon-play').click(function() {
 
 //chart//
 $("#graph_card").mouseover(function() {
-    $(".chart").css("display","inline-block");
+    $(".chart").css("display","block");
 });
 
 });
