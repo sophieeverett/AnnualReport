@@ -68,7 +68,6 @@ $(document).ready(function(){
 
 
 
-					});
 
 					// To Start button
 					$wrap.find('.toStart').on('click', function () {
@@ -175,7 +174,6 @@ $("#menuClick").click(function(){
 $(".sca-icon-play").click(function(){
 	$(".invisible").toggleClass("sca-icon-play-invisible");
 });
-
 
 
 $(".arrow-wrap").click( function() {
