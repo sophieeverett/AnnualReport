@@ -284,6 +284,11 @@ section {
   z-index: 2;
 }
 
+.animate1 {
+  transition: opacity 1s ease-in;
+  opacity: 0;
+}
+
 .content h2 {
   font-family: 'Oswald', sans-serif;
   font-weight: 400;

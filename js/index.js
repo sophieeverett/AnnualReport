@@ -184,34 +184,35 @@ $("#menuClick").click(function(){
 });
 
 $(".sca-icon-play").click(function(){
-	$(".invisible").toggleClass("sca-icon-play-invisible");
+	$("#iconPlay").toggleClass("sca-icon-play-invisible");
+
+	$('.video-container iframe').css({
+			'display': 'inline-block',
+			'z-index': '10',
+	});
 });
 
-
-//$(".arrow-wrap").click( function() {
-    //setUpFullPageScrolling(2);
-		//sly.toStart($('#foofoo'));
-//});
-
-
-
-$('.sca-icon-play').click(function() {
-    $('.video-container iframe').css({
-        'display': 'inline-block',
-				'z-index': '10',
-    });
-});
 
 //chart//
 //$("#graph_card").mouseover(function() {
   //  $(".chart").css("display","block");
 //});
 
-//animating text
+//animating graph
 sly.on('moveEnd', function() {
-	//console.log('sly change');
 	if ($('#graph_card').visible(true)) {
 		$(".chart").css("display","block");
+	}
+})
+
+//animating h1
+sly.on('moveEnd', function() {
+	if ($('#video_card').visible(true)) {
+
+		$(".animate1").css({
+			opacity: 1
+		});
+
 	}
 })
 
