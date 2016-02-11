@@ -87,7 +87,7 @@ ul.no-list, ul.no-list > li {
 .pages-nav {
   position: fixed;
   right: 30px;
-  top: 50%;
+  top: 35%;
   padding: 1em;
   z-index: 1;
 }
@@ -97,12 +97,13 @@ ul.no-list, ul.no-list > li {
   border-radius: 50em;
   width: 1em;
   height: 1em;
-  margin: .25em;
+  margin: .45em;
   cursor: pointer;
 }
 
 .pages-nav ul > li:hover {
-  background-color: rgba(255,255,255,.35);
+  background-color: orange;
+  border: orange;
 }
 
 .pages-nav li.active {
@@ -480,7 +481,27 @@ img#logo {
   background-position: center;
 }
 
-#icon.sca-icon-play-invisible {
+#iconPlay {
+  font-family: 'sca-icons', sans-serif;
+  font-size: 80px;
+  color: #2A2B2D;
+  z-index: 4;
+  width: 100px;
+  height: 100px;
+  background: orange;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  border-style: solid;
+  border-width: 10px;
+  border-color: orange;
+  position: relative;
+  top: 170px;
+  left: -50%;
+}
+
+
+#iconPlay.sca-icon-play-invisible {
   display: none
 }
 
@@ -541,6 +562,11 @@ i.sca-icon-play {
   cursor: pointer;
 }
 
+#iconPlay:hover {
+  background: white;
+  border-color: white;
+}
+
 .center {
   position: absolute;
   left: 50%
@@ -552,9 +578,9 @@ i.sca-icon-play {
 
 #thanks_card .content {
   background-image: url(images/thanks_pic.jpg);
-  -webkit-filter: grayscale(100%) sepia(1) contrast(.8) saturate(7) hue-rotate(130deg);
+  -webkit-filter: grayscale(100%) sepia(1) contrast(.8) saturate(5) hue-rotate(163deg);
   background-blend-mode: multiply;
-  background-color: #2A2B2D;
+  background-color: #303D56;
   position: absolute;
   transition: 1s;
   right: 0;
@@ -633,9 +659,9 @@ i.sca-icon-play {
 
 #graph_card .content {
   background-image: url(images/graph_pic.jpg);
-  -webkit-filter: grayscale(100%) sepia(1) contrast(.9) saturate(0) hue-rotate(130deg);
+  -webkit-filter: grayscale(100%) sepia(1) contrast(.8) saturate(5) hue-rotate(163deg);
   background-blend-mode: multiply;
-  background-color: #2A2B2D;
+  background-color: #303D56;
   position: absolute;
   transition: 1s;
   right: 0;
@@ -648,35 +674,28 @@ i.sca-icon-play {
   background-position: center;
 }
 
-p.graph-text {
+.content p.graph-text {
   z-index: 5;
-  position: inherit;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   font-size: 43px;
   color: white;
-  width: 75%;
   display: inline-block;
   text-align: center;
   line-height: 150%;
-  padding-top: 50px;
+  padding-top: 30px;
 }
 
-h6 {
-  z-index: 5;
-  position: inherit;
+.content h6 {
+  z-index: 10;
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
   font-size: 50px;
   color: white;
-  width: 75%;
-  display: inline-block;
   text-align: center;
   line-height: 150%;
-  margin-top: 267px;
+  padding-top: 272px;
 }
-
-
 
 #volunteer_card {
   position: relative;
@@ -750,7 +769,6 @@ h1.thanks {
 a.iconLink {
   color: #2A2B2D;
   text-decoration: none;
-
 }
 
 
@@ -761,12 +779,11 @@ a.iconLink {
 }
 
 .chart {
-  position: absolute;
+  position: relative;
   display: none;
   text-align: center;
-  margin-top: 220px;
+  padding-top: 220px;
   z-index: 5;
-  margin-left: 40%;
 }
 
 

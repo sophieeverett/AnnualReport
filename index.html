@@ -68,13 +68,13 @@
 									<div class="inner" data-slide="1">
 									<section id="video_card">
 											<div class="center">
-													<div id="icon" class="invisible">
+													<div id="iconPlay" class="invisible">
 										  				<i class="sca-icon-play"></i>
 													</div>
 											</div>
 													<div class="content">
 															<div class="video-container">
-																	<iframe width="560" height="349" src="http://www.youtube.com/embed/n_dZNLr2cME?rel=0&hd=1" frameborder="0" allowfullscreen>></iframe>
+																	<iframe width="560" height="349" src="http://www.youtube.com/embed/n_dZNLr2cME?rel=0&hd=1" frameborder="0" allowfullscreen></iframe>
 															</div>
 															<h1>A year in review</h1>
 															</a>
@@ -88,7 +88,7 @@
 									<section id="thanks_card">
 											<div class="content">
 													<h1>Thanks to you</h1>
-													<p class="subTitle">all of this has happened</p>
+													<p class="subTitle">all of this happened</p>
 											</div>
 									</section>
 									</div>
@@ -142,15 +142,17 @@
 							<li>
 									<div class="inner">
 									<section id="graph_card">
+										<figure class="chart" data-percent="75">
+													<svg width="200" height="200">
+															<circle class="outer" cx="95" cy="95" r="85" transform="rotate(-90, 95, 95)"/>
+													</svg>
+										</figure>
 											<div class="content">
+												<h6 class="percentage">75%</h6>
+												<p class="subTitle, graph-text">income goes directly to helping children and families</p>
 											</div>
-											<figure class="chart" data-percent="75">
-														<svg width="200" height="200">
-																<circle class="outer" cx="95" cy="95" r="85" transform="rotate(-90, 95, 95)"/>
-														</svg>
-											</figure>
-											<h6 class="percentage">75%</h6>
-											<p class="subTitle, graph-text">income goes directly to helping children and families</p>
+
+
 									</section>
 									</div>
 							</li>
@@ -207,8 +209,9 @@
 		</div>
 
 		<script src="js/jquery.js"></script>
-		<script src="js/index.js"></script>
+		<script src="js/jquery.visible.min.js"></script>
 		<script src="js/sly.js"></script>
+		<script src="js/index.js"></script>
 
 	</body>
 </html>

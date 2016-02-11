@@ -54,7 +54,7 @@ $(document).ready(function(){
 							pagesBar: $wrap.find('.page-tabs'),
 							pageBuilder:
 									function(index){
-											return '<li></li>';
+											return '<li id="nav' +  index + '"></li>';
 									},
 
 							activateOn: 'click',
@@ -104,8 +104,6 @@ $(document).ready(function(){
 					});
 
 
-
-
 			slides.each(function(){
 					$(this).css({
 							'height': windowHeight
@@ -153,6 +151,20 @@ $('a.arrow-wrap').click(function(e){
 */
 
 
+	$( ".arrow-wrap" ).click(function(e) {
+		//sly.toStart does not work if the sly frame is set to 'centered'.
+		// we are using --> itemNav: 'forceCentered'
+		//sly.toStart($('#foofoo'));
+
+		//We cant just call $('.page-tabs li')[1].click(); because we are currently in
+		//the event loop (we are handeling a click event on the arrow button).
+		//So, use setTimeout to wait for the event loop to finish before faking the click
+		//on the sly nav item.
+		setTimeout(function() {
+			$('.page-tabs li')[1].click();
+		}, 100);
+	});
+
 
 
 $("#nav-icon4").click(function(){
@@ -176,10 +188,11 @@ $(".sca-icon-play").click(function(){
 });
 
 
-$(".arrow-wrap").click( function() {
+//$(".arrow-wrap").click( function() {
     //setUpFullPageScrolling(2);
-		sly.toStart($('#foofoo'));
-});
+		//sly.toStart($('#foofoo'));
+//});
+
 
 
 $('.sca-icon-play').click(function() {
@@ -190,8 +203,16 @@ $('.sca-icon-play').click(function() {
 });
 
 //chart//
-$("#graph_card").mouseover(function() {
-    $(".chart").css("display","block");
-});
+//$("#graph_card").mouseover(function() {
+  //  $(".chart").css("display","block");
+//});
+
+//animating text
+sly.on('moveEnd', function() {
+	//console.log('sly change');
+	if ($('#graph_card').visible(true)) {
+		$(".chart").css("display","block");
+	}
+})
 
 });
