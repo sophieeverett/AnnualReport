@@ -183,15 +183,6 @@ $("#menuClick").click(function(){
 	$("#menuClick").toggleClass("menuAnimate3");
 });
 
-$(".sca-icon-play").click(function(){
-	$("#iconPlay").toggleClass("sca-icon-play-invisible");
-
-	$('.video-container iframe').css({
-			'display': 'inline-block',
-			'z-index': '10',
-	});
-});
-
 
 //chart//
 //$("#graph_card").mouseover(function() {
@@ -205,6 +196,18 @@ sly.on('moveEnd', function() {
 	}
 })
 
+$(".sca-icon-play").click(function(){
+	$("#iconPlay").toggleClass("sca-icon-play-invisible");
+
+
+	$('.video-container iframe').css({
+			'display': 'inline-block',
+			'z-index': '10',
+	});
+
+
+});
+
 //animating h1
 sly.on('moveEnd', function() {
 	if ($('#video_card').visible(true)) {
@@ -212,8 +215,57 @@ sly.on('moveEnd', function() {
 		$(".animate1").css({
 			opacity: 1
 		});
-
 	}
-})
+});
+
+
+sly.on('moveEnd', function() {
+	if ($('#thanks_card').visible(true)) {
+
+		$(".animate2").css({
+			opacity: 1
+		});
+	}
+});
+
+
+sly.on('moveEnd', function() {
+	if ($('#stat1_card').visible(true)) {
+
+		$(".animate3").css({
+			opacity: 1
+		});
+	}
+});
+
+
+sly.on('moveEnd', function() {
+	if ($('#stat2_card').visible(true)) {
+
+		$(".animate4").css({
+			opacity: 1
+		});
+	}
+});
+
+
+sly.on('moveEnd', function() {
+	if ($('#volunteer_card').visible(true)) {
+
+		$(".animate5").css({
+			opacity: 1
+		});
+	}
+});
+
+
+sly.on('moveEnd', function() {
+	if ($('#end_card').visible(true)) {
+
+		$(".thanks").css({
+			opacity: 1
+		});
+	}
+});
 
 });

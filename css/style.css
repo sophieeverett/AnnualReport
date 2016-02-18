@@ -267,6 +267,7 @@ section {
   display: block;
   z-index: 0;
   text-align: center;
+
 }
 
 .content h1 {
@@ -284,8 +285,51 @@ section {
   z-index: 2;
 }
 
-.animate1 {
-  transition: opacity 1s ease-in;
+h1.animate1 {
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  opacity: 0;
+}
+
+h1.animate2 {
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  opacity: 0;
+}
+
+h1.animate3 {
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  opacity: 0;
+}
+
+h1.animate4 {
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  opacity: 0;
+}
+
+h1.animate5 {
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  opacity: 0;
+}
+
+h1.thanks {
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
   opacity: 0;
 }
 
@@ -503,6 +547,8 @@ img#logo {
   position: relative;
   top: 170px;
   left: -50%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform:translate3d(0,0,0);
 }
 
 
@@ -542,6 +588,8 @@ img#logo {
   position: relative;
   top: 170px;
   left: -50%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform:translate3d(0,0,0);
 }
 
 #icon {
@@ -561,6 +609,8 @@ img#logo {
   position: relative;
   top: 170px;
   left: -50%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform:translate3d(0,0,0);
 }
 
 i.sca-icon-play {
@@ -708,8 +758,9 @@ i.sca-icon-play {
 
 #volunteer_card .content {
   background-image: url(images/volunteer_pic.jpg);
-  background-color: #4b4f54;
+  -webkit-filter: grayscale(100%) sepia(1) contrast(.9) saturate(0) hue-rotate(130deg);
   background-blend-mode: multiply;
+  background-color: #2A2B2D;
   background-repeat:no-repeat;
   background-position:center;
   position: absolute;
@@ -769,6 +820,8 @@ h1.thanks {
   margin: 10px;
   cursor: pointer;
   border-color: orange;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform:translate3d(0,0,0);
 }
 
 a.iconLink {
