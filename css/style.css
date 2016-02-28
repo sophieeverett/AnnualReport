@@ -135,7 +135,7 @@ nav ul li {
   margin-top: 30px;
   margin-left: -200px;
   z-index: 1;
-  background-color: black;
+  background-color: rgba(0,0,0,.5);
   color: white;
   list-style: none;
   padding-top: 90px;
@@ -148,6 +148,7 @@ nav ul li {
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
 }
+
 
 .menu_box_animate {
   margin-left: 0px;
